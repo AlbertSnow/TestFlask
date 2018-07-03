@@ -13,4 +13,4 @@ def index():
   content = Markup(markdown.markdown(markdownContent))
   return render_template('index.html', **locals())                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
 
-app.run(debug=True)
+app.run(debug=True, port=80)
