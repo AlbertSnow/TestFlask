@@ -9,7 +9,7 @@ app = Flask(__name__)
 @app.route('/')
 
 def index():
-  markdownContent = (open("./static/index.md", "r").read())
+  markdownContent = (open("./static/index.md", "r", encoding='UTF-8').read())
 #   markdownContent = "***hello***"
   content = Markup(markdown.markdown(markdownContent))
   return render_template('index.html', **locals())                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
